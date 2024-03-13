@@ -1,0 +1,48 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  .signOptions {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    cursor: pointer;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .customInput {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .newInput {
+        height: 30px;
+        width: 200px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+
+    .signButton {
+      height: 35px;
+      width: 160px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(75, 172, 232);
+      color: white;
+    }
+  }
+}

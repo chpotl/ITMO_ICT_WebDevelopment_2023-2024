@@ -1,0 +1,41 @@
+<head>
+  <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Мои конференции</h2>
+    <ul>
+      {% for conference in user_conferences %}
+      <li>
+        {{ conference.title }} - {{ conference.start_date }} -
+        {{conference.end_date}}
+        <a href="{% url 'edit_conference' conference.id %}">Редактировать</a>
+        <a href="{% url 'delete_conference' conference.id %}">Удалить</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_conference' %}" class="btn btn-primary"
+      >Создать конференцию</a
+    >
+
+    <h2>Конференции других пользователей</h2>
+    <ul>
+      {% for conference in other_conferences %}
+      <li>
+        {{ conference.title }} - {{ conference.start_date }} -
+        {{conference.end_date}} {{ conference.author }}
+        <a href="{% url 'conference_detail' conference.id %}">Подробнее</a>
+        <a href="{% url 'add_review' conference.id %}">Оставьте отзыв</a>
+        <a href="{% url 'register_for_conference' conference.id %}"
+          >Зарегистрироваться на конференцию</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>

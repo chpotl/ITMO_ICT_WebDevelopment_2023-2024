@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Confirm Delete: {{ conference.title }}</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Вы действительно хотите удалить {{ conference.title }}?</h2>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+      </form>
+      <a href="{% url 'home' %}" class="btn btn-secondary">Отмена</a>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

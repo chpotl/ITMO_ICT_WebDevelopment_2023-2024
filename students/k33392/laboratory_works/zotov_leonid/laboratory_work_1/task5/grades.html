@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Оценки по дисциплинам</title>
+  </head>
+  <body>
+    <h1>Оценки по дисциплинам:</h1>
+    <ul id="gradesList"></ul>
+
+    <script>
+      function loadGrades() {
+        fetch("/grades")
+          .then((response) => response.json())
+          .then((data) => {
+            const gradesList = document.getElementById("gradesList");
+            gradesList.innerHTML = "";
+
+            for (const discipline in data) {
+              const listItem = document.createElement("li");
+              listItem.textContent = `${discipline}: ${data[discipline]}`;
+              gradesList.appendChild(listItem);
+            }
+          });
+      }
+
+      window.addEventListener("load", loadGrades);
+    </script>
+  </body>
+</html>

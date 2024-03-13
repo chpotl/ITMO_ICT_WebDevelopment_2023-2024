@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://lab1docs.com/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lab1docs.com/task1/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lab1docs.com/task2/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lab1docs.com/task3/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lab1docs.com/task4/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lab1docs.com/task5/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>

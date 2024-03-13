@@ -1,0 +1,28 @@
+.mainContainer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .confSelection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .myConf {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .createConfBtn {
+      height: 35px;
+      width: 160px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(75, 172, 232);
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<h1>Список конференций и их участников</h1>
+
+<head>
+  <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <th>Название конференции</th>
+      <th>Участники</th>
+    </tr>
+    {% for conference, participants in participants_per_conference.items %}
+    <tr>
+      <td>{{ conference.title }}</td>
+      <td>
+        <ul>
+          {% for participant in participants %}
+          <li>{{ participant.user.username }}</li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>

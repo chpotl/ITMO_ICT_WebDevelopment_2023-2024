@@ -1,0 +1,33 @@
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  .createForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .createOrd {
+      height: 35px;
+      width: 260px;
+    }
+
+    .createArea {
+      height: 50px;
+      width: 260px;
+    }
+
+    .submitBtn {
+      height: 35px;
+      width: 260px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(75, 172, 232);
+      color: white;
+    }
+  }
+}

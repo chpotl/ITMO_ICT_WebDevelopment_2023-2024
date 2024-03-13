@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ conference.title }}</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{ conference.title }}</h1>
+      <p>{{ conference.description }}</p>
+      <p>Location: {{ conference.location }}</p>
+      <p>Start Date: {{ conference.start_date }}</p>
+      <p>End Date: {{ conference.end_date }}</p>
+      <p>Conditions: {{ conference.participation_conditions }}</p>
+
+      <h2>Registrations</h2>
+      <ul class="list-group">
+        {% for registration in registrations %}
+        <li class="list-group-item">{{ registration.user.username }}</li>
+        {% endfor %}
+      </ul>
+
+      <h2>Reviews</h2>
+      <ul class="list-group">
+        {% for review in reviews %}
+        <li class="list-group-item">
+          {{ review.user.username }} - {{ review.text }} ({{ review.rating }})
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
